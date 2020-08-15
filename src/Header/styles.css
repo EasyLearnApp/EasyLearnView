@@ -1,0 +1,11 @@
+nav.navbar {
+    padding: 0 1vw;
+}
+
+.navbar li:hover {
+    background-color: #000000;
+}
+
+.list-group-margin {
+    margin: 0px 1vw;
+}
