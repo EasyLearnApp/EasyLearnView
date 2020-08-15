@@ -1,0 +1,14 @@
+div.route-link {
+    background-color: #DCDCDC;
+    width: 100vw;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    border-radius: 1vw;
+}
+
+div.route-link h1 {
+    color: #000000;
+    padding-left: 5vw;
+    font-weight: 500;
+}
