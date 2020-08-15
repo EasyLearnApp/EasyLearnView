@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-// import App from './App';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Home from './Home/Home.jsx';
 import Class from './Class/Class.jsx';
@@ -14,6 +15,7 @@ ReactDOM.render(
   <BrowserRouter>
     <Switch>
       <Route path="/" exact={true} component={Home} />
+      <Route path="/home" component={Home} />
       <Route path="/student" component={Student} />
       <Route path="/class" component={Class} />
       <Route component={Error} />
