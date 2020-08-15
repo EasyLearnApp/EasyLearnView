@@ -13,7 +13,7 @@ function Home() {
                 <p className="lead">Este sistema foi desenvolvido para facilitar parte da administração de sua</p>
                 <p className="lead">escola e estamos felizes em ter você aqui!</p>
 
-                <a className="btn btn-primary btn-lg" href="#" role="button">Saiba mais</a>
+                <a className="btn btn-primary btn-lg" href="/home" role="button">Saiba mais</a>
             </div>
         </>
     );

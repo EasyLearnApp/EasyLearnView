@@ -4,11 +4,33 @@ div.route-link {
     height: 20vh;
     display: flex;
     align-items: center;
-    border-radius: 1vw;
+    border-radius: 0.5vw;
 }
 
 div.route-link h1 {
     color: #000000;
     padding-left: 5vw;
     font-weight: 500;
+}
+
+.directory-container {
+    margin-top: 5px;
+    height: 10vh;
+    border-radius: 5px;
+    background-color: #F4F4F4;
+}
+
+.directory-container h1 {
+    display: flex;
+    font-size: 1.4rem;
+    height: 100%;
+    align-items: center;
+}
+
+.folder-active {
+    color: blue;
+}
+
+.folder-inactive {
+    color: gray;
 }
