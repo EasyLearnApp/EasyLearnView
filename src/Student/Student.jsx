@@ -49,6 +49,8 @@ function Student() {
     /** @var {Array} */
     const [searchName, setSearchName] = useState('');
     /** @var {Array} */
+    const [searchDateOfBirth, setSearchDateOfBirth] = useState('');
+    /** @var {Array} */
     const [searchSex, setSearchSex] = useState('');
     /** @var {Array} */
     const [searchClass, setSearchClass] = useState('');
@@ -123,7 +125,41 @@ function Student() {
      * @param {Void}
      */
     function handleStudentSearch() {
+        let fields = new Array();
 
+        if (searchName) {
+            fields.push(`nome=${searchName}`);
+        }
+        if (searchDateOfBirth) {
+            fields.push(`data_nascimento=${searchDateOfBirth}`);
+        }
+        if (searchSex) {
+            fields.push(`sexo=${searchSex}`);
+        }
+        if (searchClass) {
+            fields.push(`id_turma=${searchClass}`);
+        }
+
+        const response = (new StudentController()).display(fields);
+
+        response.then(success => {
+            const data = (success.data).map(student => {
+                return [
+                    student.nome,
+                    student.data_nascimento,
+                    student.sexo === "M" ? "Masculino" : "Feminino",
+                    student.nome_turma,
+                ];
+            });
+
+            setModalListing(
+                {
+                    header: ["Aluno", "Data de Nascimento", "Sexo", "Turma"],
+                    data: data,
+                    title: "Resultado da busca - Alunos",
+                    display: true
+                });
+        });
     }
 
     /**
@@ -148,7 +184,7 @@ function Student() {
                 {
                     header: ["Aluno", "Data de Nascimento", "Sexo", "Turma"],
                     data: data,
-                    title: "Resultado da busca - Alunos",
+                    title: "Visualizar Alunos",
                     display: true
                 });
         }).catch(err => {
@@ -197,6 +233,8 @@ function Student() {
                                 </h5>
                                 <div className="row">
                                     <FormInput icon={FaUserAlt} error="Informe o nome" type="text" value={searchName} setter={setSearchName} placeholder="Nome Completo do Aluno" />
+
+                                    <FormInput icon={FaRegCalendarAlt} error="Informe a Data de Nascimento" type="date" value={searchDateOfBirth} setter={setSearchDateOfBirth} placeholder="Data de Nascimento do Aluno" />
 
                                     <Select icon={FaRegCircle} data={SEXO} error="Informe o Sexo" value={searchSex} setter={setSearchSex} hidden="Sexo" />
 
