@@ -12,4 +12,6 @@ Development of an application for the SWV Software selection process
     npm install axios
 
     npm install --save react-router-dom
+
+    npm install react-icons --save
 ```
