@@ -26,6 +26,21 @@ class StudentController {
     create(params) {
         return Axios.post(StudentController.POST, params);
     }
+
+    /**
+     * Realiza uma busca a partir de determinados critérios.
+     * 
+     * @param {Array} params
+     */
+    display(params) {
+        if (params.length === 0) {
+            return (new StudentController()).index();
+        }
+
+        const Url = `${StudentController.ALL}?${params.join('&')}`;
+
+        return Axios.get(Url);
+    }
 }
 
 export default StudentController;
