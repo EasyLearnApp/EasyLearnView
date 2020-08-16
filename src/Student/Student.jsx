@@ -139,7 +139,7 @@ function Student() {
                 return [
                     student.nome,
                     student.data_nascimento,
-                    student.sexo == "M" ? "Masculino" : "Feminino",
+                    student.sexo === "M" ? "Masculino" : "Feminino",
                     student.nome_turma,
                 ];
             });
