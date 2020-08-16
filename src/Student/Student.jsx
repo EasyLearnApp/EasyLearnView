@@ -125,7 +125,7 @@ function Student() {
      * @param {Void}
      */
     function handleStudentSearch() {
-        let fields = new Array();
+        let fields = [];
 
         if (searchName) {
             fields.push(`nome=${searchName}`);
