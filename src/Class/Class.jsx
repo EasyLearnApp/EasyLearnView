@@ -54,7 +54,7 @@ function Class() {
      * @param {Void}
      */
     function handleClassSearch() {
-        let fields = new Array();
+        let fields = [];
 
         if (searchClass) {
             fields.push(`nome=${searchClass}`);
