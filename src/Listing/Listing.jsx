@@ -1,6 +1,8 @@
 import React from 'react';
 import { Modal, Button, Table } from 'react-bootstrap';
 
+import './styles.css';
+
 function Listing(props) {
     return (
         <Modal show={props.show} onHide={props.onHide} size="lg" aria-labelledby="contained-modal-title-vcenter" centered>
@@ -10,8 +12,8 @@ function Listing(props) {
                 </Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <Table className="table table-hover">
-                    <thead>
+                <Table className="table table-hover table-striped">
+                    <thead className="thead-light">
                         <tr>
                             {
                                 (props.info.header).map((header, value) => {
