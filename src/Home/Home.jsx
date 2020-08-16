@@ -3,24 +3,14 @@ import React, { useState } from 'react';
 import Header from '../Header/Header.jsx';
 import Card from '../Card/Card.jsx';
 
-const CATEGORIES = {
-    'TURMA': 'TURMA',
-    'ALUNO': 'ALUNO'
-};
-
-const API = {
-    TURMAS: "http://swvschools.swvsoftware.com.br/api/turmas",
-    ALUNOS: "http://swvschools.swvsoftware.com.br/api/alunos"
-};
-
 /** @var {Object} */
 const OPTIONS = [
     {
-        "url": "\\alunos",
+        "url": "student",
         "label": "Alunos",
     },
     {
-        "url": "\\turmas",
+        "url": "class",
         "label": "Turmas"
     }
 ];
@@ -43,54 +33,8 @@ function Home() {
         setOptionMethod(event.target.value);
     }
 
-    /**
-     * Função responsável pela obtenção de todas as turmas.
-     * 
-     * @param {Void}
-     * 
-     * @return {Array}
-     */
-    async function handleGetStudent() {
-        return fetch(API.ALUNOS).then(response => {
-            response.json().then((data) => {
-                return data;
-            })
-        });
-    }
-
-    /**
-     * Função responsável pela obtenção de todas as turmas.
-     * 
-     * @param {Void}
-     * 
-     * @return {Array}
-     */
-    async function handleGetClass() {
-        return fetch(API.TURMAS).then(response => {
-            response.json().then((data) => {
-                return data;
-            })
-        });
-    }
-
-    async function handleSubmit() {
-        const selectValue = optionMethod || '';
-
-        let alunos = await handleGetStudent();
-
-        let turmas = await handleGetClass();
-
-        console.log(alunos);
-
-        console.log(turmas);
-
-        // const api = axios.
-
-        // http://swvschools.swvsoftware.com.br/api/alunos
-        // http://swvschools.swvsoftware.com.br/api/turmas
-
-        console.log(CATEGORIES.TURMA);
-        console.log(CATEGORIES.ALUNO);
+    function handleSubmit(e) {
+        e.preventDefault();
 
         const ElementsFilter = OPTIONS.map((value, index) => {
             return ((value.label).includes(inputFilterText)) ? value : {};
@@ -121,8 +65,7 @@ function Home() {
                             type="email" placeholder="Procuras por ..."
                             className="form-control" id="email"
                             onChange={e => { handlesetinputFilterText(e) }}
-                            aria-describedby="emailHelp"
-                            required />
+                            aria-describedby="emailHelp" />
                     </div>
                     <div className="form-group col-md-5">
                         <select id="inputState" value={optionMethod} onChange={_e => handleSetOptionMethod(_e)} className="form-control">
@@ -132,18 +75,10 @@ function Home() {
                         </select>
                     </div>
                     <div className="form-group col-md-2">
-                        <button type="submit" className="btn btn-primary" onClick={handleSubmit}>Pesquisar</button>
+                        <button type="button" className="btn btn-primary" onClick={e => { handleSubmit(e) }}>Pesquisar</button>
                     </div>
                 </div>
             </form>
-
-            <div className="row">
-
-                {/* <Card label="Alunos" url="\student" /> */}
-
-                {/* <Card label="Turmas" url="\class" /> */}
-
-            </div>
 
             <div className="row">
 
