@@ -25,14 +25,11 @@ function Home() {
     /** @var {Array} */
     const [optionMethod, setOptionMethod] = useState('');
 
-    function handlesetinputFilterText(event) {
-        setinputFilterText(event.target.value);
-    }
-
-    function handleSetOptionMethod(event) {
-        setOptionMethod(event.target.value);
-    }
-
+    /**
+     * Mostra as opções para o usuário.
+     * 
+     * @param {Object} e 
+     */
     function handleSubmit(e) {
         e.preventDefault();
 
@@ -64,11 +61,11 @@ function Home() {
                         <input
                             type="email" placeholder="Procuras por ..."
                             className="form-control" id="email"
-                            onChange={e => { handlesetinputFilterText(e) }}
+                            onChange={e => { setinputFilterText(e.target.value) }}
                             aria-describedby="emailHelp" />
                     </div>
                     <div className="form-group col-md-5">
-                        <select id="inputState" value={optionMethod} onChange={_e => handleSetOptionMethod(_e)} className="form-control">
+                        <select id="inputState" value={optionMethod} onChange={e => setOptionMethod(e.target.value)} className="form-control">
                             <option disabled hidden >Choose...</option>
                             <option value="alunos">Alunos</option>
                             <option value="turmas">Turmas</option>
@@ -81,13 +78,11 @@ function Home() {
             </form>
 
             <div className="row">
-
                 {
                     options.map((option, key) => {
                         return (option.url && option.label) ? <Card key={key} label={option.label} url={option.url} /> : <div key={key}></div>
                     })
                 }
-
             </div>
         </>
     );
