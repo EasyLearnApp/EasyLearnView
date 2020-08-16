@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Card(props) {
     return (
@@ -9,7 +10,7 @@ function Card(props) {
 
                     <p className="card-text">Gerencie os {(props.label).toLowerCase()} de uma forma fácil, cadastre, edite e pesquise com poucos cliques.</p>
 
-                    <a href={props.url} className="btn btn-primary">Gerenciar {props.label}</a>
+                    <Link to={props.url} className="btn btn-primary">Gerenciar {props.label}</Link>
                 </div>
             </div>
         </div>
