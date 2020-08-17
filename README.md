@@ -26,33 +26,33 @@ Development of an application for the SWV Software selection process
 
 `wesleyflores@wesley-2349k9p`
 
-`OS`:Manjaro 20.0.3 Lysia
+`OS:` Manjaro 20.0.3 Lysia
 
-`Kernel`:x86_64 Linux 5.6.19-2-MANJARO
+`Kernel:` x86_64 Linux 5.6.19-2-MANJARO
 
-`Uptime:`5h 28m
+`Uptime:` 5h 28m
 
-`Packages:`1477
+`Packages:` 1477
 
-`Shell:`bash 5.0.18
+`Shell:` bash 5.0.18
 
-`Resolution:`1600x900
+`Resolution:` 1600x900
 
-`DE:`KDE 5.72.0 / Plasma 5.19.3
+`DE:` KDE 5.72.0 / Plasma 5.19.3
 
-`WM:`KWin
+`WM:` KWin
 
-`GTK Theme:`Breeze [GTK2/3]
+`GTK Theme:` Breeze [GTK2/3]
 
-`Icon Theme:`breeze-dark
+`Icon Theme:` breeze-dark
 
-`Disk:`178G / 452G (42%)
+`Disk:` 178G / 452G (42%)
 
-`CPU:`Intel Core i5-3320M @ 4x 3.3GHz [58.0°C]
+`CPU:` Intel Core i5-3320M @ 4x 3.3GHz [58.0°C]
 
-`GPU:`Mesa DRI Intel(R) HD Graphics 4000 (IVB GT2)
+`GPU:` Mesa DRI Intel(R) HD Graphics 4000 (IVB GT2)
 
-`RAM:`5114MiB / 11684MiB
+`RAM:` 5114MiB / 11684MiB
 
 ### Packages
 
