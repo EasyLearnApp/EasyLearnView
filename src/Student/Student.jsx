@@ -268,8 +268,8 @@ function Student() {
                 </div>
 
                 <Listing info={modalListing} show={modalListing.display} onHide={() => setModalListing({ data: [], header: [], title: "", display: false })} />
-            
-                <Copyright/>
+
+                <Copyright />
             </div>
         </>
     );
