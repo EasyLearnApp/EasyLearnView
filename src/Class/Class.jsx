@@ -103,11 +103,8 @@ function Class() {
                     title: "Visualizar Turmas",
                     display: true
                 });
-
-            console.log(success.data);
         }).then(err => {
-            console.log(err);
-        })
+        });
     }
 
     return (
