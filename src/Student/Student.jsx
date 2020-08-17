@@ -256,8 +256,8 @@ function Student() {
 
                 <div className="card mb-3 mt-5">
                     <div className="row no-gutters">
-                        <div className="col-md-10">
-                            <div><strong>Visualizar Alunos</strong></div>
+                        <div className="col-md-10 d-flex align-items-center">
+                            <div><h3><strong>Visualizar Alunos</strong></h3></div>
                         </div>
                         <div className="col-md-2">
                             <div className="p-3">
