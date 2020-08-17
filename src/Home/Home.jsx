@@ -87,7 +87,7 @@ function Home() {
                 }
             </div>
 
-            <Copyright/>
+            <Copyright />
         </>
     );
 }
