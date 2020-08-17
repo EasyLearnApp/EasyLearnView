@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import Header from '../Header/Header.jsx';
 import Card from '../Card/Card.jsx';
 
+import Copyright from '../Copyright.jsx';
+
 /** @var {Object} */
 const OPTIONS = [
     {
@@ -84,6 +86,8 @@ function Home() {
                     })
                 }
             </div>
+
+            <Copyright/>
         </>
     );
 }

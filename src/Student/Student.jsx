@@ -12,6 +12,8 @@ import Select from '../Select/Select.jsx';
 import { FaUserAlt, FaRegCalendarAlt, FaRegCircle } from "react-icons/fa";
 import { TiGroup } from 'react-icons/ti';
 
+import Copyright from '../Copyright';
+
 import Alert from '../Alert/Alert.jsx';
 import Listing from '../Listing/Listing.jsx';
 
@@ -266,6 +268,8 @@ function Student() {
                 </div>
 
                 <Listing info={modalListing} show={modalListing.display} onHide={() => setModalListing({ data: [], header: [], title: "", display: false })} />
+            
+                <Copyright/>
             </div>
         </>
     );

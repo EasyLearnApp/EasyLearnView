@@ -8,6 +8,8 @@ import { FaUserAlt } from 'react-icons/fa';
 import Listing from '../Listing/Listing.jsx';
 import Alert from '../Alert/Alert.jsx';
 
+import Copyright from '../Copyright';
+
 import FormInput from '../FormInput/FormInput.jsx'; import ClassController from '../ClassController.js';
 
 const PATH = ['Home', 'Turmas'];
@@ -170,8 +172,9 @@ function Class() {
                 </div>
 
                 <Listing info={modalListing} show={modalListing.display} onHide={() => setModalListing({ data: [], header: [], title: "", display: false })} />
-            </div>
 
+                <Copyright/>
+            </div>
         </>
     );
 }
