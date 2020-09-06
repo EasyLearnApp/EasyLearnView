@@ -1,6 +1,6 @@
 ## SWV Software
 
-Development of an application for the SWV Software selection process
+Development of an React application for EasyLearn
 
 ## Installing the dependencies
 
