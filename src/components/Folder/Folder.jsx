@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './styles.css';
+import './Folder.css';
 
 const SPACE = String.fromCharCode(160);
 

@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
-import Header from '../Header/Header.jsx';
-import Card from '../Card/Card.jsx';
+import Header from '../../components/Header/Header.jsx';
+import Card from '../../components/Card/Card.jsx';
 
-import Copyright from '../Copyright.jsx';
+import Copyright from '../../components/Copyright/Copyright.jsx';
 
 /** @var {Object} */
 const OPTIONS = [

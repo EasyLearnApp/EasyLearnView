@@ -1,7 +1,7 @@
 import React from 'react';
 import Method from '../Method/Method.jsx';
 
-import './styles.css';
+import './Header.css';
 
 function Header() {
     return (

@@ -6,10 +6,10 @@ import * as serviceWorker from './serviceWorker';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import Home from './Home/Home.jsx';
-import Class from './Class/Class.jsx';
-import Student from './Student/Student.jsx';
-import Error from './Error/Error.jsx';
+import Home from './pages/Home/Home.jsx';
+import Class from './pages/Class/Class.jsx';
+import Student from './pages/Student/Student.jsx';
+import Error from './components/Error/Error.jsx';
 
 ReactDOM.render(
   <BrowserRouter>

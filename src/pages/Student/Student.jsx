@@ -1,21 +1,21 @@
 import React, { useState, useEffect } from 'react';
 
-import Header from '../Header/Header.jsx';
-import Folder from '../Folder/Folder.jsx';
+import Header from '../../components/Header/Header.jsx';
+import Folder from '../../components/Folder/Folder.jsx';
 
-import ClassController from '../ClassController.js';
-import StudentController from '../StudentController.js';
+import ClassController from '../../ClassController.js';
+import StudentController from '../../StudentController.js';
 
-import FormInput from '../FormInput/FormInput.jsx';
-import Select from '../Select/Select.jsx';
+import FormInput from '../../components/FormInput/FormInput.jsx';
+import Select from '../../components/Select/Select.jsx';
 
 import { FaUserAlt, FaRegCalendarAlt, FaRegCircle } from "react-icons/fa";
 import { TiGroup } from 'react-icons/ti';
 
-import Copyright from '../Copyright';
+import Copyright from '../../components/Copyright/Copyright.jsx';
 
-import Alert from '../Alert/Alert.jsx';
-import Listing from '../Listing/Listing.jsx';
+import Alert from '../../components/Alert/Alert.jsx';
+import Listing from '../../components/Listing/Listing.jsx';
 
 /** @var {Array} */
 const PATH = ['Home', 'Library', 'Data'];

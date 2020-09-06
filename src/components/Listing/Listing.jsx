@@ -1,7 +1,7 @@
 import React from 'react';
 import { Modal, Button, Table } from 'react-bootstrap';
 
-import './styles.css';
+import './Listing.css';
 
 function Listing(props) {
     return (

@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
 
-import Header from '../Header/Header.jsx';
-import Folder from '../Folder/Folder.jsx';
+import Header from '../../components/Header/Header.jsx';
+import Folder from '../../components/Folder/Folder.jsx';
 
 import { FaUserAlt } from 'react-icons/fa';
 
-import Listing from '../Listing/Listing.jsx';
-import Alert from '../Alert/Alert.jsx';
+import Listing from '../../components/Listing/Listing.jsx';
+import Alert from '../../components/Alert/Alert.jsx';
 
-import Copyright from '../Copyright';
+import Copyright from '../../components/Copyright/Copyright.jsx';
 
-import FormInput from '../FormInput/FormInput.jsx'; import ClassController from '../ClassController.js';
+import FormInput from '../../components/FormInput/FormInput.jsx';
+import ClassController from '../../ClassController.js';
 
 const PATH = ['Home', 'Turmas'];
 
@@ -170,7 +171,7 @@ function Class() {
 
                 <Listing info={modalListing} show={modalListing.display} onHide={() => setModalListing({ data: [], header: [], title: "", display: false })} />
 
-                <Copyright/>
+                <Copyright />
             </div>
         </>
     );
