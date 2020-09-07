@@ -1,4 +1,5 @@
 import Axios from "axios";
+import api from './service/api';
 
 class StudentController {
     /** @var {String} */
@@ -15,7 +16,7 @@ class StudentController {
      * @return {Array}
      */
     index() {
-        return Axios.get(StudentController.ALL);
+        return api.get('alunos');
     }
 
     /**
@@ -24,7 +25,7 @@ class StudentController {
      * @param {Object} params 
      */
     create(params) {
-        return Axios.post(StudentController.POST, params);
+        return api.post('setaluno', params);
     }
 
     /**
