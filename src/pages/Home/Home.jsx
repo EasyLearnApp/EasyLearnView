@@ -60,14 +60,10 @@ function Home() {
             <form>
                 <div className="row">
                     <div className="form-group col-md-5">
-                        <input
-                            type="email" placeholder="Procuras por ..."
-                            className="form-control" id="email"
-                            onChange={e => { setinputFilterText(e.target.value) }}
-                            aria-describedby="emailHelp" />
+                        <input type="email" placeholder="Procuras por ..." className="form-control" id="email" onChange={setinputFilterText} />
                     </div>
                     <div className="form-group col-md-5">
-                        <select id="inputState" value={optionMethod} onChange={e => setOptionMethod(e.target.value)} className="form-control">
+                        <select id="inputState" value={optionMethod} onChange={setOptionMethod} className="form-control">
                             <option disabled hidden >Choose...</option>
                             <option value="alunos">Alunos</option>
                             <option value="turmas">Turmas</option>
