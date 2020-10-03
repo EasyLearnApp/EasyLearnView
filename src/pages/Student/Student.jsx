@@ -71,11 +71,11 @@ function Student() {
         fetch(ClassController.ALL)
             .then(response => {
                 response.json().then(data => {
-                    const newArray = data.map((value, key) => {
+                    const Classes = data.map((value, key) => {
                         return ({ value: value.id_turma, label: value.nome });
                     })
 
-                    setClasses(newArray);
+                    setClasses(Classes);
                 });
             });
     }, []);
