@@ -60,11 +60,7 @@ function Home() {
             <form>
                 <div className="row">
                     <div className="form-group col-md-5">
-                        <input
-                            type="email" placeholder="Procuras por ..."
-                            className="form-control" id="email"
-                            onChange={e => { setinputFilterText(e.target.value) }}
-                            aria-describedby="emailHelp" />
+                        <input type="email" placeholder="Procuras por ..." className="form-control" id="email" onChange={e => { setinputFilterText(e.target.value) }} aria-describedby="emailHelp" />
                     </div>
                     <div className="form-group col-md-5">
                         <select id="inputState" value={optionMethod} onChange={e => setOptionMethod(e.target.value)} className="form-control">
@@ -74,7 +70,7 @@ function Home() {
                         </select>
                     </div>
                     <div className="form-group col-md-2">
-                        <button type="button" className="btn btn-primary" onClick={e => { handleSubmit(e) }}>Pesquisar</button>
+                        <button type="button" className="btn btn-primary" onClick={handleSubmit}>Pesquisar</button>
                     </div>
                 </div>
             </form>
