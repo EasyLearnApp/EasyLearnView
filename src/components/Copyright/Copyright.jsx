@@ -1,9 +1,9 @@
 import React from 'react';
 
-function Copyright() {
-    const COPYRIGHT_MESSAGE_DEFAULT = `@EasyLearn ${(new Date()).getFullYear()} - Todos os direitos reservados`;
+const __COPYRIGHT_MESSAGE_DEFAULT = `@EasyLearn ${(new Date()).getFullYear()} - Todos os direitos reservados`;
 
-    return (<><hr/><p>{COPYRIGHT_MESSAGE_DEFAULT}</p></>);
+function Copyright() {
+    return (<><hr /><p>{__COPYRIGHT_MESSAGE_DEFAULT}</p></>);
 }
 
 export default Copyright;
